@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class Car {
 
-	public BrandEnum Brand;
-	public String Model;
+	public BrandEnum brand;
+	public String model;
 	public int horsePower;
 	public String registration;
 	public Date created_at;
 
 	public Car(BrandEnum brand, String model, int horsePower, String registration, Date created_at) {
-		this.Brand = brand;
-		this.Model = model;
+		this.brand = brand;
+		this.model = model;
 		this.horsePower = horsePower;
 		this.registration = registration;
 		this.created_at = created_at;
@@ -20,19 +20,19 @@ public class Car {
 
 
 	public BrandEnum getBrand() {
-		return Brand;
+		return brand;
 	}
 
 	public void setBrand(BrandEnum brand) {
-		this.Brand = brand;
+		this.brand = brand;
 	}
 
 	public String getModel() {
-		return Model;
+		return model;
 	}
 
-	public void setModel(String Model) {
-		this.Model = Model;
+	public void setModel(String model) {
+		this.model = model;
 	}
 
 	public int getHorsePower() {
@@ -60,7 +60,8 @@ public class Car {
 	}
 	
 	 public String toString() {
-	        return "Car [car=" + Model + ", getFirstName()=" + getModel()
-	          + ", getLastName()=" + getModel() + "]";
-	    }
+	        return "Car [car = " + brand.name() + " " + model  + " " + horsePower + " " + registration + " " + new Date();
+	 }
+	 
+	
 }

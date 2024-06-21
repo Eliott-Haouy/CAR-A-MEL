@@ -7,57 +7,39 @@ import java.util.Scanner;
 public class main {
 
 	public static void main(String[] args) {
-		// Intégrer les données d'une nouvelle voiture.
+		
+		ArrayList <Car> carList = new ArrayList<Car>();
+		Car car = new Car(BrandEnum.Citroen, "C3", 23,"AZ-TR4-A4", new Date());
+		carList.add(car);
+		// TODO : récupérer voitures du JSON
 		
 		try ( Scanner scanner = new Scanner(System.in)) {
-				System.out.println("Tapez 2 pour ajouter une voiture:" );
+			while(true) {
+				System.out.println("Tapez 1 pour ajouter une voiture :"
+						+ "\nTapez 2 pour ajouter une voiture :" );
 				
-			 	int l = Integer.parseInt(scanner.nextLine());
-			 	if(l == 2) {
-			 		
-			 	BrandEnum Brand = null;
-		        while(Brand == null) {
-		        	System.out.println("La marque:" );
-			        String BrandName = scanner.nextLine();
-		        	Brand = BrandEnum.findByValue(BrandName);
-		        	if(Brand == null) {
-			        	System.out.println("Cette marque de voiture n'est pas accepté dans notre parc automobile");
-		        	}
-		        }
-			        System.out.println("Le modèle:" );
-			        String Model = scanner.nextLine();
-			        
-			        System.out.println("La puissance:");
-			        int horsePower = Integer.parseInt(scanner.nextLine());
-			        
-			        System.out.println("La plaque d'immatriculation: " );
-			        String registration = scanner.nextLine();
-			      
-			     if(registration != null) {
-			        System.out.println("La voiture a bien été enregistré " );
-			     }      
-		 
+				int userChoice = Integer.parseInt(scanner.nextLine());
+				if(userChoice == 1) {
+					showCarList(carList);
+				} else if(userChoice == 2) {
+//					TODO : appeler fonction...
+				}
+			}
+		
+		
+		
+    
+	 
 		 }
 		}
-		
-// ajout de voiture test 	
-		
-	/*	int i = 1 ;
-		if(i >= 1){
-			System.out.println("Voiture N°" + i);
-			ArrayList <Car> CarList = new ArrayList<Car>();
-			CarList.add("Brand");
-			CarList.add("Model");
-			CarList.add("horsePower");
-			CarList.add("registration");
-			CarList.add("created_at");
-			
-			System.out.println(CarList);
-			
-			
+	
+	private static void showCarList(ArrayList<Car> carList) {
+		System.out.println("la voiture");
+		for(Car car : carList) {
+			System.out.println(car.toString());
 		}
-
-	}*/
+	}
+		
 	/*{
 	"cars":[
 	{
@@ -92,4 +74,5 @@ public class main {
 } */ 
 	
 	}
-}
+
+
