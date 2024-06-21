@@ -8,6 +8,8 @@ public class main {
 
 	public static void main(String[] args) {
 		
+		CarService carService = new CarService();
+		
 		ArrayList <Car> carList = new ArrayList<Car>();
 		Car car = new Car(BrandEnum.Citroen, "C3", 23,"AZ-TR4-A4", new Date());
 		carList.add(car);
@@ -20,8 +22,9 @@ public class main {
 				
 				int userChoice = Integer.parseInt(scanner.nextLine());
 				if(userChoice == 1) {
-					showCarList(carList);
+					carService.showCarList(carList);
 				} else if(userChoice == 2) {
+					carList.add(carService.addCar());
 //					TODO : appeler fonction...
 				}
 			}
@@ -32,14 +35,7 @@ public class main {
 	 
 		 }
 		}
-	
-	private static void showCarList(ArrayList<Car> carList) {
-		System.out.println("la voiture");
-		for(Car car : carList) {
-			System.out.println(car.toString());
-		}
-	}
-		
+			
 	/*{
 	"cars":[
 	{
