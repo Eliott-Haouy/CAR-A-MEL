@@ -7,22 +7,15 @@ import java.util.Scanner;
 public class main {
 
 	public static void main(String[] args) {
-		        
-
+		// Intégrer les données d'une nouvelle voiture.
 		
-		
-		
-		
-		
-		
-		
-		
-			 
-// Intégrer les données d'une nouvelle voiture.
-		
-	/*	 try ( Scanner scanner = new Scanner(System.in)) {
-		        
-		        BrandEnum Brand = null;
+		try ( Scanner scanner = new Scanner(System.in)) {
+				System.out.println("Tapez 2 pour ajouter une voiture:" );
+				
+			 	int l = Integer.parseInt(scanner.nextLine());
+			 	if(l == 2) {
+			 		
+			 	BrandEnum Brand = null;
 		        while(Brand == null) {
 		        	System.out.println("La marque:" );
 			        String BrandName = scanner.nextLine();
@@ -43,29 +36,15 @@ public class main {
 			     if(registration != null) {
 			        System.out.println("La voiture a bien été enregistré " );
 			     }      
-		 Car car = new Car(Brand, Model, horsePower, registration); 
 		 
 		 }
-		    
-			*/
-	
+		}
 		
 // ajout de voiture test 	
 		
-		int i = 1 ;
+	/*	int i = 1 ;
 		if(i >= 1){
-			System.out.println("Car N°" + i);
-			ArrayList <Car> CarList = new ArrayList<Car>();
-			CarList.add("Brand");
-			CarList.add("Model");
-			CarList.add("horsePower");
-			CarList.add("registration");
-			CarList.add("created_at");
-			
-			System.out.println(CarList);
-		}
-		else if(i<= 0 ){
-			System.out.println("Car N°" + i);
+			System.out.println("Voiture N°" + i);
 			ArrayList <Car> CarList = new ArrayList<Car>();
 			CarList.add("Brand");
 			CarList.add("Model");
@@ -75,11 +54,42 @@ public class main {
 			
 			System.out.println(CarList);
 			
+			
 		}
 
-		
-				
-
+	}*/
+	/*{
+	"cars":[
+	{
+	"brand": "Renault",
+	"model": "Mégane",
+	"horsePower": 90,
+	"registration": "AB-157-VG",
+	"created_at": "2024-06-16T13:49:00.000000"
+	},
+	{
+	"brand": "Citroën",
+	"model": "C3",
+	"horsePower": 82,
+	"registration": "BH-567-JK",
+	"created_at": "2024-06-16T13:51:00.000000"
+	},
+	{
+	"brand": "Opel",
+	"model": "Corsa",
+	"horsePower": 95,
+	"registration": "DF-123-MN",
+	"created_at": "2024-06-17T14:00:00.000000"
+	},
+	{
+	"brand": BrandEnum,
+	"model": Model,
+	"horsePower": horsePower,
+	"registration": registration,
+	"created_at": Date
 	}
-		
+	]
+} */ 
+	
+	}
 }
