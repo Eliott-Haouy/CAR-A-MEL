@@ -18,7 +18,6 @@ public class Car {
 		this.created_at = created_at;
 	}
 
-
 	public BrandEnum getBrand() {
 		return brand;
 	}
@@ -58,10 +57,9 @@ public class Car {
 	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
-	
-	 public String toString() {
-	        return "Car [car = " + brand.name() + " " + model  + " " + horsePower + " " + registration + " " + new Date();
-	 }
-	 
-	
+
+	public String toString() {
+		return "Car [car = " + brand.name() + " " + model + " " + horsePower + " " + registration + " " + new Date();
+	}
+
 }
