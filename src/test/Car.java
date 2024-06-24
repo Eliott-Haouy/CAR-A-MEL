@@ -59,7 +59,7 @@ public class Car {
 	}
 
 	public String toString() {
-		return "Car [car = " + brand.name() + " " + model + " " + horsePower + " " + registration + " " + new Date();
+		return "\t " + brand.name() + " | " + model + " | " + horsePower + " | " + registration + " | " + new Date();
 	}
 
 }

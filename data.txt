@@ -1,0 +1,2 @@
+Bonjour, ceci est un test de stockage de données en Java.
+Deuxième ligne de texte.

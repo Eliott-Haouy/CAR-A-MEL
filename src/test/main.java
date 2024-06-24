@@ -11,13 +11,14 @@ public class main {
 		CarService carService = new CarService();
 
 		ArrayList<Car> carList = new ArrayList<Car>();
-		Car car = new Car(BrandEnum.RENAULT, "C3", 23, "AZ-TR4-A4", new Date());
+		Car car = new Car(BrandEnum.RENAULT, "Mégane", 90, "AB-157-VG", new Date());
 		carList.add(car);
 		// TODO : récupérer voitures du JSON
 
 		try (Scanner scanner = new Scanner(System.in)) {
 			while (true) {
-				System.out.println("Tapez 1 pour ajouter une voiture :" + "\nTapez 2 pour ajouter une voiture :");
+				System.out.println("Tapez 1 pour afficher les voitures du parc automobile :"
+						+ "\nTapez 2 pour ajouter une voiture :");
 
 				int userChoice = Integer.parseInt(scanner.nextLine());
 				if (userChoice == 1) {
@@ -29,16 +30,5 @@ public class main {
 			}
 		}
 	}
-
-	/*
-	 * { "cars":[ { "brand": "Renault", "model": "Mégane", "horsePower": 90,
-	 * "registration": "AB-157-VG", "created_at": "2024-06-16T13:49:00.000000" }, {
-	 * "brand": "Citroën", "model": "C3", "horsePower": 82, "registration":
-	 * "BH-567-JK", "created_at": "2024-06-16T13:51:00.000000" }, { "brand": "Opel",
-	 * "model": "Corsa", "horsePower": 95, "registration": "DF-123-MN",
-	 * "created_at": "2024-06-17T14:00:00.000000" }, { "brand": BrandEnum, "model":
-	 * Model, "horsePower": horsePower, "registration": registration, "created_at":
-	 * Date } ] }
-	 */
 
 }

@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class CarService {
 
 	public void showCarList(ArrayList<Car> carList) {
-		System.out.println("la voiture");
+		System.out.println(
+				"\tMarque | Modèle | puissance | plaque d’immatriculation | date d’entrée dans le parc.\r\n" + "");
 		for (Car car : carList) {
 			System.out.println(car.toString());
 		}

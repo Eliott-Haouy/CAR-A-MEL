@@ -1,50 +1,28 @@
 package test;
 
+import test.utils.StringNormalizer;
+
 public enum BrandEnum {
 
 	RENAULT, CITROEN, PEUGEOT, OPEL;
 
 	static BrandEnum findByValue(String brand) {
+		brand = StringNormalizer.removeAccents(brand.trim().toUpperCase());
 
-		if (BrandEnum.CITROEN.name().equals(brand)) {
+		if (BrandEnum.CITROEN.name().equals(brand.toUpperCase())) {
 			return BrandEnum.CITROEN;
 		}
-		if (BrandEnum.RENAULT.name().equals(brand)) {
+		if (BrandEnum.RENAULT.name().equals(brand.toUpperCase())) {
 			return BrandEnum.RENAULT;
 		}
 
-		if (BrandEnum.PEUGEOT.name().equals(brand)) {
+		if (BrandEnum.PEUGEOT.name().equals(brand.toUpperCase())) {
 			return BrandEnum.PEUGEOT;
 		}
-		if (BrandEnum.OPEL.name().equals(brand)) {
+		if (BrandEnum.OPEL.name().equals(brand.toUpperCase())) {
 			return BrandEnum.OPEL;
 		}
 		return null;
-	}
-
-	public static void main(String args[]) {
-
-		String str = "RENAULT";
-
-		String strlow = str.toLowerCase();
-
-		System.out.println(strlow);
-
-		String str1 = "OPEL";
-
-		String str1low = str1.toLowerCase();
-
-		System.out.println(str1low);
-		String str2 = "PEUGEOT";
-
-		String str2low = str2.toLowerCase();
-
-		System.out.println(str2low);
-		String str3 = "CITROEN";
-
-		String str3low = str3.toLowerCase();
-
-		System.out.println(str3low);
 	}
 
 }
